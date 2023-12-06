@@ -8,10 +8,12 @@ abstract class DataState<T> {
   const DataState({this.data, this.error});
 }
 
+//can be used when data crud is success
 class DataSuccess<T> extends DataState<T>{
    const DataSuccess(T data): super(data: data);
 }
 
+//can be used when data crud fails
 class DataFailed<T> extends DataState<T>{
    const DataFailed(DioError error): super(error: error);
 }
